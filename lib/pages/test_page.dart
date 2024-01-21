@@ -14,7 +14,7 @@ class _TestPageState extends State<TestPage> {
   IconData? _icon;
 
   Widget buildItem({
-    required IconData icon, //optional
+    required IconData icon,
     required String label,
     Color color = Colors.black,
   }) {
@@ -45,7 +45,6 @@ class _TestPageState extends State<TestPage> {
     );
   }
 
-  // Widget buildTextWithBackground({
   @override
   Widget build(BuildContext context) {
     var itemList = [
@@ -61,13 +60,14 @@ class _TestPageState extends State<TestPage> {
         child: Column(
           children: [
             ElevatedButton(
-                onPressed: () {
-                  setState(() {
-                    _text = "";
-                    _icon = null;
-                  });
-                },
-                child: Text("Clear")),
+              onPressed: () {
+                setState(() {
+                  _text = "";
+                  _icon = null;
+                });
+              },
+              child: Text("Clear"),
+            ),
             Expanded(
               child: Center(
                 child: Column(
